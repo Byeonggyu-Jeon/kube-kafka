@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: kafka-exporter
+  name: kafka-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: kafka-exporter
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: kafka-exporter
+    spec:
+      containers:
+        - args:
+            - --kafka.server=kafka:9093
+          image: danielqsj/kafka-exporter
+          name: kafka-exporter
+          ports:
+            - containerPort: 9308
+          resources: {}
+      restartPolicy: Always
+status: {}
