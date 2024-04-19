@@ -36,6 +36,7 @@ jobs:
           docker push ${{secrets.DOCKER_NAME}}/${{secrets.DOCKER_REPO}}:${dt}
       - name: Update kubernetes manifest
         run: |
+          git switch gitcation_test
           git pull 
           sed -i 's/image:.*/images: my-spring-application:1713426832/g' kube/spring-boot-application-deployment.yaml
           git config user.name "GitHub Actions"
