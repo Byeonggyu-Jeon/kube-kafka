@@ -38,9 +38,9 @@ jobs:
         run: |
           git switch gitcation_test
           git pull 
-          sed -i 's/image:.*/images: my-spring-application:1713426832/g' kube/spring-boot-application-deployment.yaml
-          git config user.name "GitHub Actions"
-          git config user.email "byeonggyu.jeon@bespinglobal.com"
+          sed -i 's/image:.*/images: ${{secrets.DOCKER_NAME}}/${{secrets.DOCKER_REPO}}:${dt}/g' kube/spring-boot-application-deployment.yaml
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "jbg935@gmail.com"
           git add kube/spring-boot-application-deployment.yaml
           git commit -m 'update manifest'
           git push 
