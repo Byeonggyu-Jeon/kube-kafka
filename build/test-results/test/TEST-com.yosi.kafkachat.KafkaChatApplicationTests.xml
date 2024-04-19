@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.yosi.kafkachat.KafkaChatApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-16T06:57:06" hostname="byeonggyujeon-DNPV9PXG5W" time="0.007">
+<testsuite name="com.yosi.kafkachat.KafkaChatApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-19T05:09:43" hostname="fv-az840-923" time="0.015">
   <properties/>
-  <testcase name="contextLoads()" classname="com.yosi.kafkachat.KafkaChatApplicationTests" time="0.007"/>
+  <testcase name="contextLoads()" classname="com.yosi.kafkachat.KafkaChatApplicationTests" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
