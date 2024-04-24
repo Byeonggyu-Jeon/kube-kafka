@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-container
-          image: byeonggy/my-spring-application:1713505805
+          image: byeonggy/my-spring-application:1713934771
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 # 어플리케이션이 노출하는 포트로 변경해야 합니다.
