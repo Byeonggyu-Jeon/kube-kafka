@@ -41,7 +41,7 @@ jobs:
       - name: Update kubernetes manifest
         run: |          
           git pull 
-          sed -i 's/images:.*/images: ${{secrets.DOCKER_NAME}}\/${{secrets.DOCKER_REPO}}:${{steps.vars.outputs.dt}}/g' kube/spring-boot-application-deployment.yaml
+          sed -i 's/image:.*/image: ${{secrets.DOCKER_NAME}}\/${{secrets.DOCKER_REPO}}:${{steps.vars.outputs.dt}}/g' kube/spring-boot-application-deployment.yaml
           git config --global user.name "GitHub Actions"
           git config --global user.email ${{secrets.EMAIL}}
           git add -A
