@@ -6,7 +6,7 @@ spring:
     consumer:
       group-id:
         dev: yosi
-        stg: test-topic
+        stg: stg-test-topic
       auto-offset-reset: earliest # 기본값은 latest: (최근값부터), earliest: 처음부터
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
